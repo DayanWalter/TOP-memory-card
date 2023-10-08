@@ -49,7 +49,7 @@ body h1 {
   animation-name: animate;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+  transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-15deg);
   z-index: 1;
 }
 .card:hover {
@@ -60,6 +60,10 @@ body h1 {
 .card img {
   width: 100px;
   height: 100px;
+  pointer-events: none;
+}
+.card p {
+  pointer-events: none;
 }
 
 @keyframes animate {
