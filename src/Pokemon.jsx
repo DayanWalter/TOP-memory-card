@@ -4,7 +4,7 @@ export default function Pokemon({ id }) {
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log(id);
+
   useEffect(() => {
     const fetchPokemonData = async () => {
       try {
@@ -37,7 +37,6 @@ export default function Pokemon({ id }) {
 
   return (
     <>
-      {console.log(id)}
       {loading && <div>A moment please...</div>}
       {error && <div>{`There is a problem fetching the data - ${error}`}</div>}
       {pokemon && (
@@ -45,7 +44,7 @@ export default function Pokemon({ id }) {
           <img
             key={id}
             src={pokemon.sprites.other.dream_world.front_default}
-            alt={pokemon.id}
+            alt={pokemon.name}
           />
           <p>{firstLetterUpperCase(pokemon.name)}</p>
         </>

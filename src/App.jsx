@@ -8,14 +8,13 @@ export default function App() {
   return (
     <>
       <h1>Pokemon Memory</h1>
-
-      <>
+      <div className="cardContainer">
         {cards.map((card) => (
           <Card key={card}>
             <Pokemon key={card} id={card} />
           </Card>
         ))}
-      </>
+      </div>
     </>
   );
 }
